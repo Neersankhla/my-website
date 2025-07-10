@@ -1,0 +1,8 @@
+body.bg-shopping {
+  background-image: url('images/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  backdrop-filter: blur(4px);
+}

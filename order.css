@@ -1,0 +1,23 @@
+/* order.css */
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.order-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.pizza-img {
+  height: 200px;      /* or 250px based on your design */
+  object-fit: cover;
+}
+
+.order-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}

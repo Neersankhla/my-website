@@ -1,0 +1,523 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 5px;
+  background: #181818;
+  color: #f5f5f5;
+}
+
+#logo {
+  border: 3px solid black;
+  border-radius:25px;
+}
+
+.hide-header {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Custom Header Background */
+.bg-pizzahut {
+  background-color: #b30000 !important;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #fff !important;
+  padding-bottom: 10%;
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffd6d6; /* or any color you like */
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-link:hover {
+  color: #ffd6d6 !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Order Now Button */
+.ordernow {
+  background: #fff;
+  color: #b30000 !important;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.ordernow:hover,
+.ordernow:focus,
+.ordernow:active {
+  background: #990000;
+  color: #fff !important;
+}
+
+.hero-content {
+  /* background: rgba(233, 229, 229, 0.85); semi-transparent white */
+  background: rgba(34,34,34,0.85); /* slightly lighter dark */
+  color: #fff !important;
+  padding: 2rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-btn {
+    color: #e9e3e3 !important;
+
+  /* color: #222 !important; dark text for contrast */
+}
+
+.hero {
+  background: url('images/Pizza\ 1.jpg') no-repeat center center/cover;
+  background-size: cover;
+  display: flex;
+  padding-left: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+  /* background: rgba(24,24,24,0.95); dark semi-transparent */
+  color: #f5f5f5;
+  /* color: rgb(15, 15, 15); */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24,24,24,0.6); /* Light overlay, adjust opacity as needed */
+  z-index: 1;
+}
+.hero > * {
+  position: relative;
+  z-index: 2;
+  color: #222; /* Dark text for contrast */
+}
+
+
+.hero h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.hero p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  margin: 1.2rem 0;
+}
+
+.hero-btn {
+  display: block;
+  margin: 0 auto;
+  /* ...existing code... */
+  background-color: #f1ebeb;
+  color: #b30000;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+/* ...existing code... */
+
+.hero-btn:hover {
+  text-align: center;
+  background-color: #990000;
+  color: #fff;
+}
+
+/* .col-lg-6
+body{
+  display: flex;
+  justify-content: center;   /* centers horizontally 
+  align-items: center; 
+  padding-left: 100rem;      /* centers vertically 
+  height: 100vh;             /* full viewport height
+  text-align: center;        /* centers text inside 
+  position: relative;
+  background: url('images/Pizza\ 1.jpg') no-repeat center center/cover;
+} */
+
+.div1{
+        display: flex;
+        text-align: center;
+}
+
+.hero-img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Dark Theme Features Section */
+.features-section {
+  /* background-color: #1a1a1a; */
+  background-color: #f9f1f1;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #9b0e18;
+  text-decoration: underline;
+}
+
+.feature-box {
+  background-color: #2b2b2b;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.2);
+}
+
+.feature-box h5 {
+  color: #fff;
+}
+
+.feature-box p {
+  color: #ccc;
+}
+
+.feature-icon i {
+  color: #ffcc00;
+}
+
+/* Menu Section - Dark Theme */
+.menu-section {
+  /* background-color: #121212; */
+  background-color:#f9f1f1;
+}
+
+
+.menu-section h2 {
+  color: #9b0e18; 
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.card-text {
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #fff !important; /* Make pizza names white */
+}
+
+/* Pizza Card Styling */
+.pizza-card {
+   background-color: #1f1f1f; 
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+  transition: transform 0.5s ease;
+}
+
+.pizza-card:hover {
+  transform: translateY(-20px);
+  /* box-shadow: 0 8px 20px rgba(255, 204, 0, 0.1); */
+    box-shadow: #f1ebeb;
+}
+
+.pizza-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.menu-section .pizza-card .card-body .card-text {
+  color: #f1ebeb !important;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+.price {
+  font-weight: bold;
+  display: block;
+  margin-top: 0.8rem;
+}
+
+/* limmited time offer */
+.limited-offer {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  position: relative;
+  padding: 60px 20px;
+  color:#181818
+}
+
+.limited-offer .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.limited-offer .container {
+  z-index: 1;
+}
+.limited-offer-section {
+  background-color: #f9f1f1;
+}
+
+.promo-box {
+  border: 2px dashed #ff4d4d;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  background-color: #fff;
+  max-width: 400px;
+}
+
+.bg-white {
+  background-color: #f9f1f1 !important;
+  color: #000;
+}
+
+.col-12{
+   text-decoration: underline;
+   color:#990000;
+   font-size: 0.5rem;
+}
+
+ .btn-danger:hover {
+  color: #990000;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.text1-danger{
+  border: 2px dashed #990000;
+  padding: 5%;
+}
+.text2-success{
+  border: 2px dashed #4CAF50;
+  padding: 5%;
+}
+.text3-primary{
+  border: 2px dashed #2196F3;
+  padding: 5%;
+}
+.btn-success:hover{
+  color:green;
+  background-color: #fff;
+}
+
+.btn-primary:hover {
+  color: blue;
+  background-color: #fff;
+}
+
+/* Highlight the hovered offer */
+.offer-card {
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: all 0.4s cubic-bezier(.4,2,.6,1);
+  z-index: 1;
+}
+.offer-card:hover {
+  opacity: 1;
+  transform: scale(1.08);
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+/* Location & Delivery - White Theme */
+.location-delivery-section {
+  background-color: #fff;
+  color: #333;
+  
+}
+
+.location-delivery-section h2 {
+  color: #990000;
+  text-decoration: underline;
+}
+
+.location-delivery-section h4 {
+  color: #0056b3;
+}
+
+.location-delivery-section h5 {
+  color: #28a745;
+}
+
+.location-delivery-section ul {
+  padding-left: 1rem;
+}
+
+.map-container {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Customer Review Section - White Theme */
+.customer-reviews-section {
+  background-color: #f9f1f1;
+  color: #333;
+}
+
+.review-card {
+  border: none;
+  background-color: #f9f9f9;
+  transition:background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.review-card img {
+  display: block;
+  margin: 0 auto;
+}
+
+.card-text{
+  color: #333 !important;
+}
+
+.review-card:hover,
+.review-card:active {
+ background-color: #990000;
+  color: #fff;
+}
+
+.review-avatar-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.review-avatar-wrapper:hover,
+.review-avatar-wrapper:active {
+  background: #9c1616;
+}
+
+.review-avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(158, 11, 11, 0.08);
+}
+.review-card:hover .card-text,
+.review-card:active .card-text,
+.review-card:hover h6,
+.review-card:active h6,
+.review-card:hover small,
+.review-card:active small {
+  color: #fff !important;
+}
+
+.review-card:hover .review-stars,
+.review-card:active .review-stars {
+  color: #ffd700 !important;
+}
+
+.review-avatar {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact us and About us Section*/
+.about-contact-section h2 {
+  margin-bottom: 1rem;
+}
+
+.about-contact-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about-contact-section form .form-control {
+  border-radius: 0.4rem;
+  border: 1px solid #d81414;
+}
+
+.about-contact-section form .btn {
+  border-radius: 0.4rem;
+}
+
+/* Footer Section*/
+.footer {
+  font-size: 15px;
+  line-height: 1.7;
+  border-top: 1px solid #e4e4e4;
+}
+
+.footer h5 {
+  margin-bottom: 1rem;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+  color: #dc3545; /* Bootstrap red */
+  text-decoration: underline;
+}
+
+.footer i {
+  margin-right: 8px;
+}
+
+.footer a {
+  transition: 0.3s ease;
+}
+
+.footer a:hover {
+  color: #dc3545; /* Bootstrap's red color */
+  text-decoration: none;
+}
